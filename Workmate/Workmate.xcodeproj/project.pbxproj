@@ -17,6 +17,7 @@
 		4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA17240C11D700B24B24 /* WorkerController.swift */; };
 		4257CA1B240C12B900B24B24 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1A240C12B900B24B24 /* Network.swift */; };
 		4257CA1F240C17A300B24B24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1E240C17A300B24B24 /* Constants.swift */; };
+		4257CA21240C194200B24B24 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA20240C194200B24B24 /* WebServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4257CA17240C11D700B24B24 /* WorkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerController.swift; sourceTree = "<group>"; };
 		4257CA1A240C12B900B24B24 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4257CA1E240C17A300B24B24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4257CA20240C194200B24B24 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				4257CA1A240C12B900B24B24 /* Network.swift */,
+				4257CA20240C194200B24B24 /* WebServices.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				4257CA1F240C17A300B24B24 /* Constants.swift in Sources */,
 				4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */,
+				4257CA21240C194200B24B24 /* WebServices.swift in Sources */,
 				4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */,
 				4257CA1B240C12B900B24B24 /* Network.swift in Sources */,
 				4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */,
