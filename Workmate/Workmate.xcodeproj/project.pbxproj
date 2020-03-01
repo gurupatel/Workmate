@@ -16,6 +16,7 @@
 		4257C9F8240C0FBE00B24B24 /* WorkmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9F7240C0FBE00B24B24 /* WorkmateTests.swift */; };
 		4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA17240C11D700B24B24 /* WorkerController.swift */; };
 		4257CA1B240C12B900B24B24 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1A240C12B900B24B24 /* Network.swift */; };
+		4257CA1F240C17A300B24B24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1E240C17A300B24B24 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		4257C9F9240C0FBE00B24B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4257CA17240C11D700B24B24 /* WorkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerController.swift; sourceTree = "<group>"; };
 		4257CA1A240C12B900B24B24 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4257CA1E240C17A300B24B24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 			children = (
 				4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */,
 				4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */,
+				4257CA1E240C17A300B24B24 /* Constants.swift */,
 				4257CA19240C12A800B24B24 /* Model */,
 				4257CA16240C11D700B24B24 /* Controller */,
 				4257C9E6240C0FBD00B24B24 /* Main.storyboard */,
@@ -269,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4257CA1F240C17A300B24B24 /* Constants.swift in Sources */,
 				4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */,
 				4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */,
 				4257CA1B240C12B900B24B24 /* Network.swift in Sources */,
