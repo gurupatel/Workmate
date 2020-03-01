@@ -56,4 +56,23 @@ struct Constants {
         
         return NetworkReachabilityManager()?.isReachable ?? false
     }
+    
+    //MARK:- getLightGreyColor Functions
+
+    static func getLightGreyColor() -> UIColor {
+        
+        return UIColor(red: 0.467, green: 0.467, blue: 0.467, alpha: 1)
+    }
+    
+    // MARK: - createUIActivityIndicatorView Method
+    
+    static func createUIActivityIndicatorView() -> UIActivityIndicatorView {
+        
+        let indicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+        indicator.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        indicator.color = .black
+
+        return indicator
+    }
+
 }
