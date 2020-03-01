@@ -46,6 +46,7 @@
 		4257CA1A240C12B900B24B24 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		4257CA1E240C17A300B24B24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4257CA20240C194200B24B24 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		4257CA22240C216400B24B24 /* Workmate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Workmate-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -72,6 +73,7 @@
 		4257C9D4240C0FBD00B24B24 = {
 			isa = PBXGroup;
 			children = (
+				4257CA22240C216400B24B24 /* Workmate-Bridging-Header.h */,
 				4257C9DF240C0FBD00B24B24 /* Workmate */,
 				4257C9F6240C0FBE00B24B24 /* WorkmateTests */,
 				4257C9DE240C0FBD00B24B24 /* Products */,
@@ -449,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.workmate.dev.Workmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Workmate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +470,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.workmate.dev.Workmate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Workmate-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

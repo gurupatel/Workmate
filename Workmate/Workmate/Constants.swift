@@ -32,6 +32,20 @@ struct Constants {
 
     static let userDict : [String : AnyObject] = ["username" : "+6281313272005" as AnyObject , "password" : "alexander" as AnyObject]
 
+    // MARK: - Keychain
+    
+    static  func keychain_setObject(_ object: AnyObject, forKey: String) {
+        let result = JNKeychain.saveValue(object, forKey: forKey)
+        if !result {
+            print("keychain saving: smth went wrong")
+        }
+    }
+    
+    static  func keychain_valueForKey(_ key: String) -> AnyObject? {
+        let value = JNKeychain.loadValue(forKey: key)
+        return value as AnyObject?
+    }
+
     //MARK:- isConnectedToInternet Functions
 
     static func isConnectedToInternet() -> Bool {
