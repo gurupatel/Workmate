@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5ACB98AE0591B9BB3095C4 /* libPods-Workmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E8E23894094D8F77C94806 /* libPods-Workmate.a */; };
 		4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */; };
 		4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */; };
 		4257C9E5240C0FBD00B24B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E4240C0FBD00B24B24 /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		290613E9BBA8CBCC797B9B85 /* Pods-Workmate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.release.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.release.xcconfig"; sourceTree = "<group>"; };
 		4257C9DD240C0FBD00B24B24 /* Workmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +40,8 @@
 		4257C9F3240C0FBE00B24B24 /* WorkmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4257C9F7240C0FBE00B24B24 /* WorkmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateTests.swift; sourceTree = "<group>"; };
 		4257C9F9240C0FBE00B24B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
+		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5ACB98AE0591B9BB3095C4 /* libPods-Workmate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +69,8 @@
 				4257C9DF240C0FBD00B24B24 /* Workmate */,
 				4257C9F6240C0FBE00B24B24 /* WorkmateTests */,
 				4257C9DE240C0FBD00B24B24 /* Products */,
+				BB5A723B2C97DE02B3DBFB8D /* Pods */,
+				FB006E7E7EEAF7C128C6718B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +106,24 @@
 			path = WorkmateTests;
 			sourceTree = "<group>";
 		};
+		BB5A723B2C97DE02B3DBFB8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */,
+				290613E9BBA8CBCC797B9B85 /* Pods-Workmate.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB006E7E7EEAF7C128C6718B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4E8E23894094D8F77C94806 /* libPods-Workmate.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +131,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4257C9FC240C0FBE00B24B24 /* Build configuration list for PBXNativeTarget "Workmate" */;
 			buildPhases = (
+				B5C76AF5618DE1554C73A71C /* [CP] Check Pods Manifest.lock */,
 				4257C9D9240C0FBD00B24B24 /* Sources */,
 				4257C9DA240C0FBD00B24B24 /* Frameworks */,
 				4257C9DB240C0FBD00B24B24 /* Resources */,
@@ -194,6 +220,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5C76AF5618DE1554C73A71C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Workmate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4257C9D9240C0FBD00B24B24 /* Sources */ = {
@@ -360,6 +411,7 @@
 		};
 		4257C9FD240C0FBE00B24B24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +429,7 @@
 		};
 		4257C9FE240C0FBE00B24B24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 290613E9BBA8CBCC797B9B85 /* Pods-Workmate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
