@@ -18,6 +18,13 @@
 		4257CA1B240C12B900B24B24 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1A240C12B900B24B24 /* Network.swift */; };
 		4257CA1F240C17A300B24B24 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA1E240C17A300B24B24 /* Constants.swift */; };
 		4257CA21240C194200B24B24 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA20240C194200B24B24 /* WebServices.swift */; };
+		4257CA25240C29F500B24B24 /* WorkerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA24240C29F500B24B24 /* WorkerData.swift */; };
+		4257CA27240C2B0700B24B24 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA26240C2B0700B24B24 /* Position.swift */; };
+		4257CA29240C2D7900B24B24 /* WorkerDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA28240C2D7900B24B24 /* WorkerDataParser.swift */; };
+		4257CA2B240C303E00B24B24 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA2A240C303E00B24B24 /* Manager.swift */; };
+		4257CA2D240C31D400B24B24 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA2C240C31D400B24B24 /* Location.swift */; };
+		4257CA2F240C31DE00B24B24 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA2E240C31DE00B24B24 /* Address.swift */; };
+		4257CA31240C332E00B24B24 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA30240C332E00B24B24 /* Client.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		4257CA1E240C17A300B24B24 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4257CA20240C194200B24B24 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		4257CA22240C216400B24B24 /* Workmate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Workmate-Bridging-Header.h"; sourceTree = "<group>"; };
+		4257CA24240C29F500B24B24 /* WorkerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerData.swift; sourceTree = "<group>"; };
+		4257CA26240C2B0700B24B24 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		4257CA28240C2D7900B24B24 /* WorkerDataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkerDataParser.swift; sourceTree = "<group>"; };
+		4257CA2A240C303E00B24B24 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		4257CA2C240C31D400B24B24 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4257CA2E240C31DE00B24B24 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		4257CA30240C332E00B24B24 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,10 +141,25 @@
 		4257CA19240C12A800B24B24 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4257CA23240C29E500B24B24 /* WorkerData */,
 				4257CA1A240C12B900B24B24 /* Network.swift */,
 				4257CA20240C194200B24B24 /* WebServices.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4257CA23240C29E500B24B24 /* WorkerData */ = {
+			isa = PBXGroup;
+			children = (
+				4257CA24240C29F500B24B24 /* WorkerData.swift */,
+				4257CA26240C2B0700B24B24 /* Position.swift */,
+				4257CA2A240C303E00B24B24 /* Manager.swift */,
+				4257CA2C240C31D400B24B24 /* Location.swift */,
+				4257CA2E240C31DE00B24B24 /* Address.swift */,
+				4257CA30240C332E00B24B24 /* Client.swift */,
+				4257CA28240C2D7900B24B24 /* WorkerDataParser.swift */,
+			);
+			path = WorkerData;
 			sourceTree = "<group>";
 		};
 		BB5A723B2C97DE02B3DBFB8D /* Pods */ = {
@@ -278,11 +307,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4257CA1F240C17A300B24B24 /* Constants.swift in Sources */,
+				4257CA2D240C31D400B24B24 /* Location.swift in Sources */,
 				4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */,
 				4257CA21240C194200B24B24 /* WebServices.swift in Sources */,
+				4257CA25240C29F500B24B24 /* WorkerData.swift in Sources */,
 				4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */,
+				4257CA31240C332E00B24B24 /* Client.swift in Sources */,
+				4257CA2F240C31DE00B24B24 /* Address.swift in Sources */,
 				4257CA1B240C12B900B24B24 /* Network.swift in Sources */,
+				4257CA27240C2B0700B24B24 /* Position.swift in Sources */,
+				4257CA29240C2D7900B24B24 /* WorkerDataParser.swift in Sources */,
 				4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */,
+				4257CA2B240C303E00B24B24 /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

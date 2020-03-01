@@ -19,6 +19,31 @@ class WorkerController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
 
+        self.getWorkerData()
+    }
+    
+    // MARK: - getWorkerData Method
+
+    func getWorkerData() {
+        
+        let webServices = WebServices()
+        
+        webServices.getWorkerData(completion: { (response, error) in
+
+            if (error != nil) {
+                
+                //Error
+            }
+            else {
+                
+                //API Success
+                
+                if (response != nil) {
+                    
+                    let workerDataEntity = WorkerDataParser.parseWorkerData(data: response)
+                }
+            }
+        })
     }
 }
 
