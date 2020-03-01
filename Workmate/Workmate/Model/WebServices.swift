@@ -19,11 +19,11 @@ class WebServices : NSObject {
 
     // MARK: - authenticateUser Method
 
-    func authenticateUser(params: NSDictionary, completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
+    func authenticateUser(params: [String : AnyObject], completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
         
         let URL: String = Constants.authenticateUser
                 
-        Network.sharedInstance.request(URL, method: Constants.postMethode, params: (params as! [String : AnyObject]), onCompletion: { (reponse) in
+        Network.sharedInstance.request(URL, method: Constants.postMethode, params: (params), onCompletion: { (reponse) in
         
                 let jsonObject = try? (JSONSerialization.jsonObject(with: reponse.rawData(), options: []) as! NSDictionary)
 
@@ -65,7 +65,7 @@ class WebServices : NSObject {
 
                 let serverResponseDict = jsonObject as NSDictionary?
 
-                //print("authenticateUser : ", serverResponseDict!)
+                //print("postClockInTime : ", serverResponseDict!)
 
                 completion(serverResponseDict, reponse.error)
         })
@@ -83,7 +83,7 @@ class WebServices : NSObject {
 
                 let serverResponseDict = jsonObject as NSDictionary?
 
-                //print("authenticateUser : ", serverResponseDict!)
+                //print("postClockOutTime : ", serverResponseDict!)
 
                 completion(serverResponseDict, reponse.error)
         })

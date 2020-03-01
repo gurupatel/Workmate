@@ -15,9 +15,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Authenticate User from server
+        self.authenticateUser()
+        
         return true
     }
 
+    // MARK: - authenticateUser Method
+
+    func authenticateUser() {
+        
+        let webServices = WebServices()
+        
+        webServices.authenticateUser(params: Constants.userDict, completion: { (reponse, error) in
+
+            if (error != nil) {
+                
+                //Error
+            }
+            else {
+                
+                //API Success
+                
+                if (reponse != nil) {
+                    
+                }
+            }
+        })
+    }
+    
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

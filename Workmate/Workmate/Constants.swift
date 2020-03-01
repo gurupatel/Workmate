@@ -28,6 +28,10 @@ struct Constants {
 
     static let postMethode: String = "POST"
 
+    //--------------- User Details ---------------
+
+    static let userDict : [String : AnyObject] = ["username" : "+6281313272005" as AnyObject , "password" : "alexander" as AnyObject]
+
     //MARK:- isConnectedToInternet Functions
 
     static func isConnectedToInternet() -> Bool {
