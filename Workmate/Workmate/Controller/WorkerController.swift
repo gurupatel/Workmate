@@ -63,6 +63,12 @@ class WorkerController: UIViewController {
         lblContactNoTitle.textColor = Constants.getLightGreyColor()
         lblClockInTitle.textColor = Constants.getLightGreyColor()
         lblClockOutTitle.textColor = Constants.getLightGreyColor()
+        
+//        let screenRect: CGRect = UIScreen.main.bounds
+//
+//        let frameRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.height)
+//        
+//        let customView = CustomView.init(frame: frameRect, view: self.view)
     }
     
     // MARK: - getWorkerData Method

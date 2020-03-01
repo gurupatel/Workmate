@@ -25,6 +25,9 @@
 		4257CA2D240C31D400B24B24 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA2C240C31D400B24B24 /* Location.swift */; };
 		4257CA2F240C31DE00B24B24 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA2E240C31DE00B24B24 /* Address.swift */; };
 		4257CA31240C332E00B24B24 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA30240C332E00B24B24 /* Client.swift */; };
+		4257CA39240C495500B24B24 /* CustomProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA38240C495400B24B24 /* CustomProgress.swift */; };
+		4257CA3D240C49AE00B24B24 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA3C240C49AE00B24B24 /* CustomView.swift */; };
+		4257CA3F240C49EE00B24B24 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4257CA3E240C49EE00B24B24 /* CustomView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		4257CA2C240C31D400B24B24 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4257CA2E240C31DE00B24B24 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		4257CA30240C332E00B24B24 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		4257CA38240C495400B24B24 /* CustomProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomProgress.swift; sourceTree = "<group>"; };
+		4257CA3C240C49AE00B24B24 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		4257CA3E240C49EE00B24B24 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +117,8 @@
 				4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */,
 				4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */,
 				4257CA1E240C17A300B24B24 /* Constants.swift */,
+				4257CA3B240C499300B24B24 /* View */,
+				4257CA35240C44F000B24B24 /* HelperClasses */,
 				4257CA19240C12A800B24B24 /* Model */,
 				4257CA16240C11D700B24B24 /* Controller */,
 				4257C9E6240C0FBD00B24B24 /* Main.storyboard */,
@@ -160,6 +168,23 @@
 				4257CA28240C2D7900B24B24 /* WorkerDataParser.swift */,
 			);
 			path = WorkerData;
+			sourceTree = "<group>";
+		};
+		4257CA35240C44F000B24B24 /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				4257CA38240C495400B24B24 /* CustomProgress.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		4257CA3B240C499300B24B24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4257CA3C240C49AE00B24B24 /* CustomView.swift */,
+				4257CA3E240C49EE00B24B24 /* CustomView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BB5A723B2C97DE02B3DBFB8D /* Pods */ = {
@@ -262,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4257C9ED240C0FBE00B24B24 /* LaunchScreen.storyboard in Resources */,
+				4257CA3F240C49EE00B24B24 /* CustomView.xib in Resources */,
 				4257C9EA240C0FBE00B24B24 /* Assets.xcassets in Resources */,
 				4257C9E8240C0FBD00B24B24 /* Main.storyboard in Resources */,
 			);
@@ -306,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4257CA3D240C49AE00B24B24 /* CustomView.swift in Sources */,
 				4257CA1F240C17A300B24B24 /* Constants.swift in Sources */,
 				4257CA2D240C31D400B24B24 /* Location.swift in Sources */,
 				4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */,
@@ -319,6 +346,7 @@
 				4257CA29240C2D7900B24B24 /* WorkerDataParser.swift in Sources */,
 				4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */,
 				4257CA2B240C303E00B24B24 /* Manager.swift in Sources */,
+				4257CA39240C495500B24B24 /* CustomProgress.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
