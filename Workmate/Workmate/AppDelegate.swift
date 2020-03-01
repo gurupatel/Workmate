@@ -45,6 +45,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if (key != "") {
                         
                         Constants.keychain_setObject(key as AnyObject, forKey: Constants.authKey)
+                        
+                        self.getWorkerData()
                     }
                     else {
                         
@@ -56,6 +58,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
     }
     
+    // MARK: - getWorkerData Method
+
+    func getWorkerData() {
+        
+        let webServices = WebServices()
+        
+        webServices.getWorkerData(completion: { (response, error) in
+
+            if (error != nil) {
+                
+                //Error
+            }
+            else {
+                
+                //API Success
+                
+                if (response != nil) {
+                    
+                }
+            }
+        })
+    }
+
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

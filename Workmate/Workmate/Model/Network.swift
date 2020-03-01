@@ -58,7 +58,7 @@ class Network {
                 
         let sessionManager = self.initSessionManager()
 
-        sessionManager!.request(strURL, method: HTTPMethod(rawValue: method)!, parameters: params, encoding: JSONEncoding.default)
+        sessionManager!.request(strURL, method: HTTPMethod(rawValue: method)!, parameters: params, encoding: JSONEncoding.default, headers: self.getAPIHeaders())
             .responseSwiftyJSON(completionHandler: { dataResponse in
                 
                 var contentJSON = JSON()
@@ -74,5 +74,14 @@ class Network {
                 
                     onCompletion(contentJSON)
             })
+    }
+    
+    // MARK: - getAPIHeaders Method
+
+    func getAPIHeaders() -> [String: String]? {
+
+        let headersDict = ["authorization": Constants.keychain_valueForKey(Constants.authKey)]
+
+        return (headersDict as! [String : String])
     }
 }
