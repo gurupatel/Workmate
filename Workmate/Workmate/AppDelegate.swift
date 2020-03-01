@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let webServices = WebServices()
         
-        webServices.authenticateUser(params: Constants.userDict, completion: { (reponse, error) in
+        webServices.authenticateUser(params: Constants.userDict, completion: { (response, error) in
 
             if (error != nil) {
                 
@@ -38,8 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 //API Success
                 
-                if (reponse != nil) {
+                if (response != nil) {
                     
+                    let key = response!["key"] as? String ?? ""
+                    
+                    if (key != "") {
+                        
+                        Constants.keychain_setObject(key as AnyObject, forKey: Constants.authKey)
+                    }
+                    else {
+                        
+                        //Error
+                        //This field is required.
+                    }
                 }
             }
         })

@@ -23,7 +23,7 @@ class WebServices : NSObject {
         
         let URL: String = Constants.authenticateUser
                 
-        Network.sharedInstance.request(URL, method: Constants.postMethode, params: (params), onCompletion: { (reponse) in
+        Network.sharedInstance.request(URL, method: Constants.postMethode, params: params, onCompletion: { (reponse) in
         
                 let jsonObject = try? (JSONSerialization.jsonObject(with: reponse.rawData(), options: []) as! NSDictionary)
 
