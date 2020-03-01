@@ -10,11 +10,11 @@
 		0C5ACB98AE0591B9BB3095C4 /* libPods-Workmate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E8E23894094D8F77C94806 /* libPods-Workmate.a */; };
 		4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */; };
 		4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */; };
-		4257C9E5240C0FBD00B24B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9E4240C0FBD00B24B24 /* ViewController.swift */; };
 		4257C9E8240C0FBD00B24B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4257C9E6240C0FBD00B24B24 /* Main.storyboard */; };
 		4257C9EA240C0FBE00B24B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4257C9E9240C0FBE00B24B24 /* Assets.xcassets */; };
 		4257C9ED240C0FBE00B24B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4257C9EB240C0FBE00B24B24 /* LaunchScreen.storyboard */; };
 		4257C9F8240C0FBE00B24B24 /* WorkmateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257C9F7240C0FBE00B24B24 /* WorkmateTests.swift */; };
+		4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4257CA17240C11D700B24B24 /* WorkerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,6 @@
 		4257C9DD240C0FBD00B24B24 /* Workmate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workmate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4257C9E4240C0FBD00B24B24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4257C9E7240C0FBD00B24B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4257C9E9240C0FBE00B24B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4257C9EC240C0FBE00B24B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +39,7 @@
 		4257C9F3240C0FBE00B24B24 /* WorkmateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkmateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4257C9F7240C0FBE00B24B24 /* WorkmateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkmateTests.swift; sourceTree = "<group>"; };
 		4257C9F9240C0FBE00B24B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4257CA17240C11D700B24B24 /* WorkerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkerController.swift; sourceTree = "<group>"; };
 		AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Workmate.debug.xcconfig"; path = "Target Support Files/Pods-Workmate/Pods-Workmate.debug.xcconfig"; sourceTree = "<group>"; };
 		D4E8E23894094D8F77C94806 /* libPods-Workmate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Workmate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,7 +88,7 @@
 			children = (
 				4257C9E0240C0FBD00B24B24 /* AppDelegate.swift */,
 				4257C9E2240C0FBD00B24B24 /* SceneDelegate.swift */,
-				4257C9E4240C0FBD00B24B24 /* ViewController.swift */,
+				4257CA16240C11D700B24B24 /* Controller */,
 				4257C9E6240C0FBD00B24B24 /* Main.storyboard */,
 				4257C9E9240C0FBE00B24B24 /* Assets.xcassets */,
 				4257C9EB240C0FBE00B24B24 /* LaunchScreen.storyboard */,
@@ -106,13 +106,20 @@
 			path = WorkmateTests;
 			sourceTree = "<group>";
 		};
+		4257CA16240C11D700B24B24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4257CA17240C11D700B24B24 /* WorkerController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BB5A723B2C97DE02B3DBFB8D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				AF6469986907FC871F15971B /* Pods-Workmate.debug.xcconfig */,
 				290613E9BBA8CBCC797B9B85 /* Pods-Workmate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -251,7 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4257C9E5240C0FBD00B24B24 /* ViewController.swift in Sources */,
+				4257CA18240C11D700B24B24 /* WorkerController.swift in Sources */,
 				4257C9E1240C0FBD00B24B24 /* AppDelegate.swift in Sources */,
 				4257C9E3240C0FBD00B24B24 /* SceneDelegate.swift in Sources */,
 			);
