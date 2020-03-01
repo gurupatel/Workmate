@@ -3,23 +3,27 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
+  - JNKeychain (0.1.4)
   - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Alamofire
   - Alamofire-SwiftyJSON
+  - JNKeychain
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Alamofire-SwiftyJSON
+    - JNKeychain
     - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
+  JNKeychain: fb6cc9ec95959ba46cd95d0ee6f7a05e41da9f42
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 93e09bb82d7e00fb76fa395bdc6274c01687dfd5
+PODFILE CHECKSUM: cb272aae4a936dac3fe72704bf967b167a19d6c9
 
 COCOAPODS: 1.9.0.beta.2
