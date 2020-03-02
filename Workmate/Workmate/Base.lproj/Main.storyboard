@@ -93,9 +93,32 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0018313725489999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMf-mX-ooF">
+                                <rect key="frame" x="137" y="263.5" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Ft1-36-XCP"/>
+                                    <constraint firstAttribute="height" constant="140" id="T8a-q5-fuD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-is-8to">
+                                <rect key="frame" x="154" y="280.5" width="106" height="106"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="a5S-sC-rbO"/>
+                                    <constraint firstAttribute="height" constant="106" id="dN8-Bi-kVC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Clock In"/>
+                                <connections>
+                                    <action selector="clockBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noG-55-PmU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1ax-is-8to" firstAttribute="centerY" secondItem="wMf-mX-ooF" secondAttribute="centerY" id="0Da-Ey-PfO"/>
                             <constraint firstItem="iIz-7W-dZP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="1e9-ox-Hrj"/>
                             <constraint firstItem="52Y-qX-ln2" firstAttribute="top" secondItem="HPZ-7l-hXo" secondAttribute="bottom" constant="4" id="5Ff-H2-nJZ"/>
                             <constraint firstItem="0aE-Zd-zuY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="28" id="6kv-FT-KvG"/>
@@ -105,9 +128,11 @@
                             <constraint firstItem="O33-aP-XvX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0aE-Zd-zuY" secondAttribute="trailing" constant="8" symbolic="YES" id="AxE-hN-XeC"/>
                             <constraint firstItem="52Y-qX-ln2" firstAttribute="leading" secondItem="HPZ-7l-hXo" secondAttribute="leading" id="AxO-IO-AQQ"/>
                             <constraint firstItem="6ug-JR-crG" firstAttribute="centerY" secondItem="ugy-pj-rCY" secondAttribute="centerY" id="DOC-fe-bIz"/>
+                            <constraint firstItem="wMf-mX-ooF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E06-Iz-msM"/>
                             <constraint firstItem="T6m-BW-MiO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="FLB-Kz-5tu"/>
                             <constraint firstItem="iIz-7W-dZP" firstAttribute="top" secondItem="eIh-IB-4Hl" secondAttribute="bottom" constant="6" id="FMs-p5-ZO4"/>
                             <constraint firstItem="Gcf-J7-N2E" firstAttribute="centerY" secondItem="5G2-bR-fvl" secondAttribute="centerY" id="FuA-zK-pfm"/>
+                            <constraint firstItem="1ax-is-8to" firstAttribute="centerX" secondItem="wMf-mX-ooF" secondAttribute="centerX" id="JPH-mc-wbi"/>
                             <constraint firstItem="HPZ-7l-hXo" firstAttribute="top" secondItem="5G2-bR-fvl" secondAttribute="bottom" constant="24" id="U94-ba-h5U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iIz-7W-dZP" secondAttribute="trailing" constant="28" id="UPP-BR-xRE"/>
                             <constraint firstItem="T6m-BW-MiO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0aE-Zd-zuY" secondAttribute="trailing" constant="8" symbolic="YES" id="YcB-d6-Nyq"/>
@@ -126,12 +151,15 @@
                             <constraint firstItem="ugy-pj-rCY" firstAttribute="top" secondItem="iIz-7W-dZP" secondAttribute="bottom" constant="12" id="s2Z-w3-G3y"/>
                             <constraint firstItem="0aE-Zd-zuY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="tFz-12-vMS"/>
                             <constraint firstItem="dx5-vM-zeY" firstAttribute="centerY" secondItem="HPZ-7l-hXo" secondAttribute="centerY" id="wt4-f8-hGf"/>
+                            <constraint firstItem="wMf-mX-ooF" firstAttribute="top" secondItem="os8-Nu-8Ij" secondAttribute="bottom" constant="60" id="xkg-Gs-3W0"/>
                             <constraint firstItem="os8-Nu-8Ij" firstAttribute="leading" secondItem="dx5-vM-zeY" secondAttribute="leading" id="zO9-gP-hUo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="clockBtn" destination="1ax-is-8to" id="yDt-kl-bXg"/>
                         <outlet property="lblClientName" destination="eIh-IB-4Hl" id="caN-wR-SSW"/>
+                        <outlet property="lblClockBtnBg" destination="wMf-mX-ooF" id="lHT-P3-qg3"/>
                         <outlet property="lblClockIn" destination="52Y-qX-ln2" id="Ti7-e4-fH7"/>
                         <outlet property="lblClockInTitle" destination="HPZ-7l-hXo" id="bxB-fl-pai"/>
                         <outlet property="lblClockOut" destination="os8-Nu-8Ij" id="MUw-vZ-Hn1"/>

@@ -62,6 +62,6 @@ extension CustomProgress {
     public func setPresent(_ currentValue: Int) {
         presentLabel.text = "\(currentValue)%"
         leftImage.frame = CGRect(x: 0, y: 0, width: frame.size.width / CGFloat(maxValue) * CGFloat(currentValue), height: frame.size.height)
-        print(leftImage.frame)
+        //print(leftImage.frame)
     }
 }

@@ -10,6 +10,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="Workmate" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="fro-ps-jUu" id="gYW-EL-WDd"/>
+                <outlet property="customProgress" destination="Pjo-Lh-GYw" id="nBy-ve-fex"/>
+                <outlet property="lblChecking" destination="zib-jO-USm" id="5yb-bE-xIX"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -17,20 +19,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjo-Lh-GYw" customClass="CustomProgress" customModule="Workmate" customModuleProvider="target">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pjo-Lh-GYw">
                     <rect key="frame" x="40" y="443" width="334" height="20"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="FPA-o5-go1"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clocking In…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zib-jO-USm">
+                    <rect key="frame" x="159" y="401" width="96" height="18"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CANCEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaT-Pr-dMh">
+                    <rect key="frame" x="176" y="487" width="62.5" height="30"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPl-fE-Eak">
+                    <rect key="frame" x="176" y="487" width="62.5" height="30"/>
+                    <connections>
+                        <action selector="cancelBtnAction:" destination="-1" eventType="touchUpInside" id="kjh-lZ-1yW"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstItem="Pjo-Lh-GYw" firstAttribute="top" secondItem="zib-jO-USm" secondAttribute="bottom" constant="24" id="B5A-gq-sLt"/>
+                <constraint firstItem="NaT-Pr-dMh" firstAttribute="top" secondItem="Pjo-Lh-GYw" secondAttribute="bottom" constant="24" id="GBO-wr-1cC"/>
+                <constraint firstItem="rPl-fE-Eak" firstAttribute="top" secondItem="NaT-Pr-dMh" secondAttribute="top" id="HQk-vc-HhC"/>
                 <constraint firstItem="Pjo-Lh-GYw" firstAttribute="centerY" secondItem="i6S-RX-BS6" secondAttribute="centerY" id="PLo-pU-UpG"/>
+                <constraint firstItem="rPl-fE-Eak" firstAttribute="trailing" secondItem="NaT-Pr-dMh" secondAttribute="trailing" id="PRi-3f-vPR"/>
+                <constraint firstItem="zib-jO-USm" firstAttribute="centerX" secondItem="Pjo-Lh-GYw" secondAttribute="centerX" id="QoH-dQ-dhI"/>
                 <constraint firstItem="i6S-RX-BS6" firstAttribute="trailing" secondItem="Pjo-Lh-GYw" secondAttribute="trailing" constant="40" id="SNs-Yb-S47"/>
                 <constraint firstItem="Pjo-Lh-GYw" firstAttribute="leading" secondItem="i6S-RX-BS6" secondAttribute="leading" constant="40" id="ej0-7S-O1g"/>
+                <constraint firstItem="NaT-Pr-dMh" firstAttribute="centerX" secondItem="Pjo-Lh-GYw" secondAttribute="centerX" id="gCv-nZ-ZDF"/>
+                <constraint firstItem="rPl-fE-Eak" firstAttribute="bottom" secondItem="NaT-Pr-dMh" secondAttribute="bottom" id="kMg-Y6-03P"/>
                 <constraint firstItem="Pjo-Lh-GYw" firstAttribute="centerX" secondItem="i6S-RX-BS6" secondAttribute="centerX" id="nGK-3Y-XCO"/>
+                <constraint firstItem="rPl-fE-Eak" firstAttribute="leading" secondItem="NaT-Pr-dMh" secondAttribute="leading" id="qtA-Hu-VYq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="i6S-RX-BS6"/>
             <point key="canvasLocation" x="-7.2463768115942031" y="10.714285714285714"/>

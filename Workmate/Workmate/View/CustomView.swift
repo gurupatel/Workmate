@@ -17,7 +17,11 @@ class CustomView: UIView {
     
     var currentValue: Int = 0
 
-    @IBOutlet var customProgress: CustomProgress!
+    @IBOutlet var customProgress: UIView!
+    
+    @IBOutlet var lblChecking: UILabel!
+
+    var progress : CustomProgress!
     
     public init(frame: CGRect , view : UIView) {
         super.init(frame: frame )
@@ -25,10 +29,13 @@ class CustomView: UIView {
         
         contentView.frame = frame
         contentView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
-        contentView.alpha = 0.96
+        contentView.alpha = 1
         contentView.layer.backgroundColor = UIColor(red: 0.249, green: 0.249, blue: 0.249, alpha: 1).cgColor
         view.addSubview(contentView)
         
+        customProgress.layer.cornerRadius = 4.0
+        customProgress.layer.masksToBounds = true
+
         self.startProgress()
     }
     
@@ -38,27 +45,46 @@ class CustomView: UIView {
     
     func startProgress() {
 
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true)
 
-        customProgress = CustomProgress(frame: contentView.frame)
-        customProgress.backgroundColor = UIColor.lightGray
-        customProgress.leftImage.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
-        customProgress.presentLabel.isHidden = true
-        customProgress.maxValue = 100
+        let viewFrame = CGRect(x: 0, y: 0, width: customProgress.frame.size.width, height: 20)
+        
+        progress = CustomProgress(frame: viewFrame)
+        progress.backgroundColor = .white
+        progress.leftImage.backgroundColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1)
+        progress.presentLabel.isHidden = true
+        progress.maxValue = 10
+        
+        customProgress.addSubview(progress)
     }
     
     @objc private func timerUpdate() {
         
         currentValue += 1
-        if currentValue <= 100 {
-            customProgress.setPresent(currentValue)
+        if currentValue <= 10 {
+            progress.setPresent(currentValue)
         }else {
 
-            timer?.invalidate()
-            timer = nil
+            self.cancelBtnAction(nil)
             
-            currentValue = 0
+            self.invalidateTimer()
         }
     }
 
+    func invalidateTimer() {
+        
+        timer?.invalidate()
+        timer = nil
+        
+        currentValue = 0
+    }
+    
+    // MARK: - Button Action Methods
+    
+    @IBAction func cancelBtnAction(_ sender: UIButton?) {
+
+        self.invalidateTimer()
+
+        self.contentView.removeFromSuperview()
+    }
 }

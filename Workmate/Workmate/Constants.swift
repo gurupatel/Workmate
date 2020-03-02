@@ -75,4 +75,16 @@ struct Constants {
         return indicator
     }
 
+    static func getTodayString() -> String{
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm a "
+        formatter.amSymbol = "AM"
+        formatter.pmSymbol = "PM"
+
+        let currentDateStr = formatter.string(from: Date())
+        //print(currentDateStr)
+            
+        return currentDateStr
+    }
 }
