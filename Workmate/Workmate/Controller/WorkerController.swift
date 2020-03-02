@@ -158,23 +158,7 @@ class WorkerController: UIViewController {
     
     @IBAction func clockBtnAction(_ sender: UIButton?) {
 
-        if (lblClockIn.text == "-") {
-            
-            //Check In
-            
-            lblClockIn.text = Constants.getTodayString()
-            
-            clockBtn.setTitle("Clock Out", for: .normal)
-        }
-        else {
-            
-            //Check Out
-
-            lblClockOut.text = Constants.getTodayString()
-            
-            lblClockBtnBg.isHidden = true
-            clockBtn.isHidden = true
-        }
+        self.addProgressBar()
     }
     
     func addProgressBar() {
@@ -184,6 +168,21 @@ class WorkerController: UIViewController {
         let frameRect = CGRect(x: 0, y: 0, width: screenRect.width, height: screenRect.height)
         
         let customView = CustomView.init(frame: frameRect, view: self.view)
+        customView.delegate = self
+    }
+    
+    func drawClockInData() {
         
+        lblClockIn.text = Constants.getTodayString()
+        
+        clockBtn.setTitle("Clock Out", for: .normal)
+    }
+    
+    func drawClockOutData() {
+        
+        lblClockOut.text = Constants.getTodayString()
+        
+        lblClockBtnBg.isHidden = true
+        clockBtn.isHidden = true
     }
 }

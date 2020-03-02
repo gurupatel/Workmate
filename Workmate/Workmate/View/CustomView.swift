@@ -23,6 +23,8 @@ class CustomView: UIView {
 
     var progress : CustomProgress!
     
+    var delegate: WorkerController?
+
     public init(frame: CGRect , view : UIView) {
         super.init(frame: frame )
         Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)
@@ -65,6 +67,22 @@ class CustomView: UIView {
             progress.setPresent(currentValue)
         }else {
 
+            if (delegate != nil) {
+             
+                if (delegate!.lblClockIn.text == "-") {
+                    
+                    //Check In
+                           
+                    delegate!.drawClockInData()
+                }
+                else {
+                    
+                    //Check Out
+
+                    delegate!.drawClockOutData()
+                }
+            }
+
             self.cancelBtnAction(nil)
             
             self.invalidateTimer()
@@ -82,7 +100,7 @@ class CustomView: UIView {
     // MARK: - Button Action Methods
     
     @IBAction func cancelBtnAction(_ sender: UIButton?) {
-
+        
         self.invalidateTimer()
 
         self.contentView.removeFromSuperview()
