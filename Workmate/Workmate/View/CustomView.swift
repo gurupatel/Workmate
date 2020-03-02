@@ -21,6 +21,8 @@ class CustomView: UIView {
     
     @IBOutlet var lblChecking: UILabel!
 
+    @IBOutlet var lblCancel: UILabel!
+
     var progress : CustomProgress!
     
     var delegate: WorkerController?
@@ -38,6 +40,9 @@ class CustomView: UIView {
         customProgress.layer.cornerRadius = 4.0
         customProgress.layer.masksToBounds = true
 
+        lblCancel.attributedText = NSAttributedString(string: "CANCEL", attributes:
+        [.underlineStyle: NSUnderlineStyle.single.rawValue])
+        
         self.startProgress()
     }
     

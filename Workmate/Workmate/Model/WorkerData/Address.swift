@@ -13,4 +13,6 @@ class Address: NSObject {
     // MARK: - Variables And Properties
     
     var street: String? = nil
+    var latitude = NSNumber()
+    var longitude = NSNumber()
 }

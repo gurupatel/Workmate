@@ -10,6 +10,8 @@ import UIKit
 
 class WorkerController: UIViewController {
 
+    var workerDataEntity = WorkerData()
+    
     var indicator: UIActivityIndicatorView!
 
     @IBOutlet var lblPositionName: UILabel!
@@ -68,7 +70,9 @@ class WorkerController: UIViewController {
         lblContactNoTitle.textColor = Constants.getLightGreyColor()
         lblClockInTitle.textColor = Constants.getLightGreyColor()
         lblClockOutTitle.textColor = Constants.getLightGreyColor()
-        
+        lblClockIn.textColor = Constants.getLightGreyColor()
+        lblClockOut.textColor = Constants.getLightGreyColor()
+
         lblClockBtnBg.backgroundColor = UIColor(red: 0.496, green: 0.496, blue: 0.496, alpha: 1)
         lblClockBtnBg.layer.cornerRadius = 70.0
         lblClockBtnBg.layer.masksToBounds = true
@@ -99,12 +103,9 @@ class WorkerController: UIViewController {
                 
                 if (response != nil) {
                     
-                    let workerDataEntity = WorkerDataParser.parseWorkerData(data: response)
+                    self.workerDataEntity = WorkerDataParser.parseWorkerData(data: response)!
                     
-                    if (workerDataEntity != nil) {
-                        
-                        self.drawData(workerDataEntity: workerDataEntity!)
-                    }
+                    self.drawData(workerDataEntity: self.workerDataEntity)
                 }
             }
         })
@@ -169,6 +170,19 @@ class WorkerController: UIViewController {
         
         let customView = CustomView.init(frame: frameRect, view: self.view)
         customView.delegate = self
+        
+        if (lblClockIn.text == "-") {
+                           
+            //Check In
+                 
+            customView.lblChecking.text = "Clocking In…"
+        }
+        else {
+                           
+            //Check Out
+
+            customView.lblChecking.text = "Clocking Out…"
+        }
     }
     
     func drawClockInData() {
@@ -176,6 +190,8 @@ class WorkerController: UIViewController {
         lblClockIn.text = Constants.getTodayString()
         
         clockBtn.setTitle("Clock Out", for: .normal)
+        
+        self.callCheckIn()
     }
     
     func drawClockOutData() {
@@ -184,5 +200,57 @@ class WorkerController: UIViewController {
         
         lblClockBtnBg.isHidden = true
         clockBtn.isHidden = true
+        
+        self.callCheckOut()
+    }
+    
+    func callCheckIn () {
+        
+        let webServices = WebServices()
+
+        let locationDict : [String : AnyObject] = ["latitude" : workerDataEntity.locationEntity.addressEntity.latitude as AnyObject, "longitude" : workerDataEntity.locationEntity.addressEntity.longitude as AnyObject]
+
+        webServices.postClockInTime(params: locationDict, completion: { (response, error) in
+
+            self.removeIndicator()
+            
+            if (error != nil) {
+                
+                //Error
+            }
+            else {
+                
+                //API Success
+                
+                if (response != nil) {
+                    
+                }
+            }
+        })
+    }
+    
+    func callCheckOut () {
+        
+        let webServices = WebServices()
+
+        let locationDict : [String : AnyObject] = ["latitude" : workerDataEntity.locationEntity.addressEntity.latitude as AnyObject, "longitude" : workerDataEntity.locationEntity.addressEntity.longitude as AnyObject]
+
+        webServices.postClockOutTime(params: locationDict, completion: { (response, error) in
+
+            self.removeIndicator()
+            
+            if (error != nil) {
+                
+                //Error
+            }
+            else {
+                
+                //API Success
+                
+                if (response != nil) {
+                    
+                }
+            }
+        })
     }
 }

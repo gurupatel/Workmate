@@ -80,8 +80,8 @@ class Network {
 
     func getAPIHeaders() -> [String: String]? {
 
-        let headersDict = ["authorization": Constants.keychain_valueForKey(Constants.authKey)]
-
+        let headersDict = ["authorization": Constants.keychain_valueForKey(Constants.authKey) as Any, "Content-Type": "application/json" as AnyObject] 
+        
         return (headersDict as! [String : String])
     }
 }

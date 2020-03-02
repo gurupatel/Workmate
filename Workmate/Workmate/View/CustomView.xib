@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="contentView" destination="fro-ps-jUu" id="gYW-EL-WDd"/>
                 <outlet property="customProgress" destination="Pjo-Lh-GYw" id="nBy-ve-fex"/>
+                <outlet property="lblCancel" destination="NaT-Pr-dMh" id="YNg-bI-nhb"/>
                 <outlet property="lblChecking" destination="zib-jO-USm" id="5yb-bE-xIX"/>
             </connections>
         </placeholder>

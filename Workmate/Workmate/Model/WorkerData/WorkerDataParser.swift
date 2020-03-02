@@ -81,6 +81,8 @@ class WorkerDataParser: NSObject {
         if (data != nil) {
 
             addressEntity.street = data!["street_1"] as? String ?? ""
+            addressEntity.latitude = (data!["latitude"] as? NSNumber)!
+            addressEntity.longitude = (data!["longitude"] as? NSNumber)!
         }
         
         return addressEntity

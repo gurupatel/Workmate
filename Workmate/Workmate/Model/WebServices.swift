@@ -55,11 +55,11 @@ class WebServices : NSObject {
 
     // MARK: - postClockInTime Method
 
-    func postClockInTime(params: NSDictionary, completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
+    func postClockInTime(params: [String : AnyObject], completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
         
         let URL: String = Constants.clockInAPI
                 
-        Network.sharedInstance.request(URL, method: Constants.postMethode, params: (params as! [String : AnyObject]), onCompletion: { (reponse) in
+        Network.sharedInstance.request(URL, method: Constants.postMethode, params: params, onCompletion: { (reponse) in
         
                 let jsonObject = try? (JSONSerialization.jsonObject(with: reponse.rawData(), options: []) as! NSDictionary)
 
@@ -73,11 +73,11 @@ class WebServices : NSObject {
     
     // MARK: - postClockOutTime Method
 
-    func postClockOutTime(params: NSDictionary, completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
+    func postClockOutTime(params: [String : AnyObject], completion: @escaping (_ response: NSDictionary?, _ error: Error?) -> Void) {
         
         let URL: String = Constants.clockOutAPI
                 
-        Network.sharedInstance.request(URL, method: Constants.postMethode, params: (params as! [String : AnyObject]), onCompletion: { (reponse) in
+        Network.sharedInstance.request(URL, method: Constants.postMethode, params: params, onCompletion: { (reponse) in
         
                 let jsonObject = try? (JSONSerialization.jsonObject(with: reponse.rawData(), options: []) as! NSDictionary)
 
